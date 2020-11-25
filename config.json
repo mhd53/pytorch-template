@@ -35,8 +35,17 @@
             "gamma": 0.1
         }
     },
+    "warmup_scheduler": {
+        "type": "GradualWarmupScheduler",
+        "args": {
+            "total_epoch": 10,
+            "multiplier": 1.0
+        }
+    },
     "trainer": {
+        "type": "Trainer",
         "epochs": 100,
+        "args": {},
 
         "save_dir": "saved/",
         "save_period": 1,
